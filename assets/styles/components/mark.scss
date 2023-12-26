@@ -1,0 +1,95 @@
+.mark__info {
+}
+
+.mark__info-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mark__info-logo {
+  max-height: 40px;
+}
+
+.mark__info-dealer {
+  flex: 1;
+  padding: 0 12px;
+  border-left: 1px solid $color-black;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.mark__info-title {
+  margin-top: 16px;
+}
+
+.mark__info-title img {
+  width: auto;
+  max-width: 100%;
+  max-height: 120px;
+}
+
+.mark__info-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin-top: -32px;
+}
+
+.mark__info-credit {
+  flex: 1;
+  color: $color-black;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: $fontFamilyDop;
+}
+
+// .mark__info-credit span {
+//   display: block;
+//   font-size: 32px;
+// }
+
+.mark__info-car {
+  flex: 1;
+}
+
+.mark__info-car img {
+  width: 100%;
+}
+
+@media (max-width: $mobile-width-only) {
+  .mark__info-credit {
+    max-width: 120px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .mark__info-head {
+    width: 360px;
+  }
+  .mark__info-car img {
+    max-height: 320px;
+    object-fit: contain;
+  }
+  .mark__info-line {
+    align-items: flex-start;
+    margin-top: 16px;
+    max-height: 260px;
+  }
+  .mark__info-car {
+    flex: 2;
+    margin-top: -160px;
+  }
+  .mark__info-credit {
+    font-size: 1.4vw;
+  }
+  .mark__info-title img {
+    width: auto;
+    max-width: 100%;
+    max-height: 14vw;
+  }
+}

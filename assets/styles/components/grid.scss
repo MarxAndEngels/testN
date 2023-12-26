@@ -1,0 +1,49 @@
+.grid__text {
+  display: block;
+  margin-top: 10px;
+}
+
+.grid__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .grid__text {
+    margin-top: 0;
+  }
+  .grid {
+    display: flex;
+    &.reverse{
+      flex-direction: row-reverse;
+      .grid__text{
+        padding-left: 0;
+      }
+    }
+  }
+  .grid__left, .grid__text {
+    width: calc(100% - 432px);
+    padding: 0 16px;
+    box-sizing: content-box;
+  }
+  .grid__right, .grid__form {
+    width: 400px;
+    min-width: 400px;
+    padding: 0 16px;
+    box-sizing: content-box;
+  }
+  .grid__sticky {
+    position: sticky;
+    top: 112px;
+  }
+  .grid__text {
+    display: block;
+  }
+  .grid__form {
+    padding: 16px;
+    box-shadow: $box-shadow;
+    border-radius: 4px;
+  }
+}

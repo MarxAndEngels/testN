@@ -1,0 +1,53 @@
+.error__page-title {
+  font-size: 64px;
+  font-family: $fontFamilyDop;
+  text-align: center;
+  color: $color-element-light;
+}
+
+.error__img {
+  max-width: 100%;
+}
+
+.error__page-image {
+  width: 100%;
+  margin-top: -80px;
+}
+
+.error__page-subtitle {
+  text-align: center;
+  font-family: $fontFamilyDop;
+}
+
+.error__page-text {
+  color: $color-element;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.error__page .button {
+  width: 220px;
+  margin: 24px auto;
+}
+
+.error__img-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: $desktop-width) {
+  .error__page-title {
+    font-size: 240px;
+  }
+
+  .error__img-wrap {
+    margin-bottom: -120px;
+  }
+
+  .error__img {
+    top: -120px;
+    position: relative;
+  }
+}

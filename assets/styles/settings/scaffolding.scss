@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none !important;
+}
+
+input, button {
+  outline: none;
+  border: none;
+  font-family: $fontFamily, $fontApple;
+}
+
+body {
+  min-width: 280px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: $fontFamily, $fontApple;
+  font-weight: 400;
+  color: $color-text;
+  background: $color-body;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  padding-top: 57px;
+  transform: scale(1);
+  transition: transform .32s ease-in-out;
+  transform-origin: center top;
+}
+
+.wrapper--modal {
+  transform: scale(.98);
+}
+
+.page {
+  margin-top: 16px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+.hide_title {
+  position: absolute;
+  z-index: -1;
+}
+
+.mobile-none {
+  display: none;
+}
+
+.nuxt-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+  vertical-align: auto !important;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container__block {
+  position: relative;
+}
+
+.container__block .heading {
+  position: sticky;
+  background: $color-white;
+  top: 56px;
+  padding: 16px;
+  z-index: 5;
+  width: calc(100% + 32px);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -16px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+  }
+  .mobile-none {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
+  .wrapper {
+    padding-top: 112px;
+  }
+  .wrapper--modal {
+    transform: scale(1);
+  }
+
+}

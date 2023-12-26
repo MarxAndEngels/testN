@@ -1,0 +1,230 @@
+.slider-index {
+  margin-top: -80px;
+  height: 100vh;
+}
+
+.slider__mouse {
+  display: none;
+}
+
+.slider-index__slide {
+  height: 100%;
+  background-position: 90% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 265px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(#101327, rgba(0, 0, 0, 0));
+  }
+}
+
+.slider-index__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-index__slide .container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-index__text {
+  @include text;
+  text-align: right;
+  padding-top: 120px;
+  color: $color-white;
+}
+
+.slider-index__number {
+  font-family: $fontFamilyDop;
+  font-size: 80px;
+  line-height: 90px;
+  color: $color-white;
+  opacity: 0.2;
+  padding-top: 120px;
+  margin-left: 24px;
+}
+
+.slider-index__title {
+  @include title;
+  color: $color-element;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.slider-index__slide--uni-k .slider-index__title,
+.slider-index__slide--seltos .slider-index__title,
+.slider-index__slide--monjaro .slider-index__title,
+.slider-index__slide--uni-t .slider-index__title {
+  color: $color-element-light;
+}
+
+.slider-index__slide--tugella .slider-index__title {
+  color: $color-element-light;
+}
+
+.slider-index__slide .button {
+  background-color: $color-element;
+  color: $color-white;
+}
+
+.slider-index__buttons {
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.slider-index__buttons .button {
+  width: 50%;
+}
+
+@media (max-width: $mobile-width-only) {
+  .slider-index {
+    height: 448px;
+    // margin-bottom: -48px;
+  }
+
+  .slider-index__slide {
+    &:after {
+      height: 448px;
+    }
+  }
+
+  .slider-index__slide--uni-t .slider-index__title,
+  .slider-index__slide--c5 .slider-index__title {
+    color: $color-element-light;
+  }
+
+  .slider-index .f-carousel__nav {
+    bottom: 32px;
+  }
+
+  .slider-index .slider-index__buttons {
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .slider-index {
+    height: 640px;
+  }
+
+  .slider-index__text {
+    margin-top: auto;
+    width: 320px;
+    text-align: left;
+  }
+  .slider__mouse {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    width: 24px;
+    height: 40px;
+    right: 5vw;
+    bottom: 30%;
+    border: 1px solid $color-white;
+    border-radius: 16px;
+    color: $color-white;
+
+    &:after {
+      content: "";
+      width: 2px;
+      height: 3px;
+      background: $color-white;
+      position: absolute;
+      left: 50%;
+      animation: mouse 1.6s infinite ease-in-out;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+
+  .slider__mouse span {
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    white-space: nowrap;
+    top: -60px;
+    left: -33px;
+  }
+
+  .slider-index__number {
+    font-size: 220px;
+    line-height: 248px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .slider-index__title {
+    text-align: left;
+    margin-top: -104px;
+  }
+  .slider-index__buttons {
+    width: 480px;
+  }
+  .slider-index {
+    margin-left: -20vw;
+  }
+  .slider-index__slide {
+    padding-left: 20vw !important;
+  }
+
+  .slider-index .f-carousel__nav {
+    position: absolute;
+    bottom: 60px;
+    right: 5vw;
+
+    &:after {
+      background: $color-element;
+    }
+  }
+
+  .slider-index .f-carousel__nav .f-button {
+    top: 0 !important;
+    transform: translateY(0) !important;
+    filter: brightness(0) invert(1);
+  }
+
+  .slider-index .f-carousel__nav {
+    position: absolute;
+    bottom: 60px;
+    right: 5vw;
+
+    &:after {
+      background: $color-white;
+      top: 11px;
+    }
+  }
+
+  .slider-index .f-carousel__nav .f-button {
+    background: url("/img/slider/arrow.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  .slider-index .f-carousel__nav .f-button.is-next {
+    transform: rotate(180deg) !important;
+  }
+}
+
+@media (min-width: $desktop-large-width) {
+  .slider-index {
+    height: 720px;
+  }
+}

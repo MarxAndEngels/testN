@@ -1,0 +1,87 @@
+.button {
+  display: flex;
+  height: 42px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .16s;
+  transform: scale(1);
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.button--short {
+  height: 32px;
+  border-radius: 2px;
+}
+
+.button--more, .button--info, .button--trade-in {
+  background: $color-white;
+  color: $color-black;
+  border: 1px solid $color-black;
+}
+
+.button--slider, .button--card-credit {
+  background: $color-main;
+  color: $color-white;
+  padding: 0 16px;
+
+  &:active {
+    background: $color-main;
+    transform: scale(1.02);
+  }
+}
+
+.button--modification {
+  background: $color-white;
+  color: $color-black;
+  border: 1px solid $color-black;
+}
+
+.button--active-light {
+  color: $color-main;
+  background: $color-main-light;
+
+  &:active {
+    background: $color-main;
+    transform: scale(1.02);
+  }
+}
+
+
+.button--active {
+  background: $color-main;
+  color: $color-white;
+
+  &:active {
+    background: $color-main;
+    transform: scale(1.02);
+  }
+}
+
+.button--callback {
+  color: $color-white;
+  background: $color-green;
+  padding: 0 16px;
+}
+
+.button--primary {
+  background: $color-main;
+  color: $color-white;
+
+  &:active {
+    background: $color-main;
+    transform: scale(1.02);
+  }
+}
+
+.button--action {
+  border: 1px solid $color-white;
+  color: $color-white;
+  padding: 0 16px;
+}

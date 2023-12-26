@@ -1,0 +1,27 @@
+.dealer__card {
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+}
+
+.dealer__card-title {
+  font-family: $fontFamilyBold, $fontApple;
+}
+
+.dealer__card-info {
+  margin-top: 16px;
+}
+
+.dealer__card-info-line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-grey;
+  padding: 12px 0;
+  font-size: 12px;
+}
+
+.dealer__card-photo {
+  width: 100%;
+  display: block;
+  margin-top: 16px;
+}

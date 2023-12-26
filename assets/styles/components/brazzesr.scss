@@ -1,0 +1,53 @@
+.brazzers__button-container {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 3px);
+  top: 0;
+  overflow: hidden;
+  /*left: 0;*/
+  /*background-color: red;*/
+  display: flex;
+  opacity: 0;
+  transition: 0.24s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.brazzers:not(:hover) .brazzers__button {
+  opacity: 0;
+}
+
+.brazzers__button {
+  position: relative;
+  flex: 1;
+  min-height: 7px; /* другая ширина? */
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.brazzers__button:after {
+  position: absolute;
+  bottom: 8px;
+  right: 1px;
+  left: 1px;
+  height: 1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.7);
+  transition: offer__equipmentcolor 0.24s;
+}
+
+.brazzers img.load {
+  filter: blur(5px);
+  transition: filter 0.5s;
+  will-change: filter;
+}
+
+.brazzers img.loaded {
+  filter: blur(0);
+}
+
+.brazzers__button:hover:after {
+  background-color: $color-element;
+}

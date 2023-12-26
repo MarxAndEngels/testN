@@ -1,0 +1,35 @@
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: ./_docker/app/Dockerfile
+    container_name: ${PROJECT}_nuxt
+    restart: unless-stopped
+    tty: true
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:latest
+    container_name: ${PROJECT}_nginx
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${PROJECT}.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"
+      - "traefik.http.routers.${PROJECT}.tls=true"
+      - "traefik.http.routers.${PROJECT}.tls.certresolver=letsEncrypt"
+      - "traefik.http.routers.${PROJECT}.middlewares=redirect-to-non-www@file"
+      - "traefik.http.services.${PROJECT}-service.loadbalancer.server.port=8010"
+    volumes:
+      - ./_docker/nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - web
+      - internal
+    depends_on:
+      - nuxt
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false

@@ -1,0 +1,27 @@
+.lazyload {
+  &:not(.catalog__img .lazyload) {
+    @include lazyload;
+  }
+}
+
+.lazyloading {
+  &:not(.catalog__img .lazyloading) {
+    @include lazyload;
+  }
+}
+
+.lazyloaded {
+  &:not(.catalog__img .lazyloaded) {
+    @include lazyloaded;
+  }
+}
+
+img.load {
+  filter: blur(2px);
+  transition: filter .2s;
+  will-change: filter;
+}
+
+img.loaded {
+  filter: blur(0);
+}

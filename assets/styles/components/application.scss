@@ -1,0 +1,22 @@
+.application{
+  margin-top: 16px;
+}
+.application__line{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.application__block{
+  width: 100%;
+}
+@media screen and (min-width: $tablet-width) {
+  .application__line{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .application__block{
+    width: calc(50% - 12px);
+  }
+}

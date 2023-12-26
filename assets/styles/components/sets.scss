@@ -1,0 +1,92 @@
+.sets {
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+}
+
+.set {
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  padding: 12px 16px;
+  background: $color-grey;
+  height: 180px;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $color-grey-dark;
+  }
+
+  &:hover .set__number {
+    color: $color-grey;
+  }
+
+  &:hover .set__image {
+    right: -8px;
+  }
+}
+
+.set__image {
+  transition: all 0.3s;
+}
+
+.set__title {
+  font-size: 16px;
+  color: $color-element;
+}
+
+.set__number {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 64px;
+  text-transform: uppercase;
+  font-family: $fontFamilyDop;
+  color: $color-grey-dark;
+  transition: all 0.3s;
+}
+
+.set__image {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  right: 0;
+  max-width: 300px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .set {
+    &:nth-child(3) .set__image {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .set__image {
+    right: 16px;
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .sets {
+    height: 400px;
+    padding: 0 16px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .set {
+    width: calc(33% - 8px);
+    height: calc(50% - 8px);
+    cursor: pointer;
+
+    &:nth-child(3) {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+.actions__line {
+  @include horizontal-scrollbar;
+  overflow-x: scroll;
+  display: flex;
+  gap: 16px;
+  width: calc(100% + 16px);
+}
+
+.actions__item {
+  min-width: 240px;
+  background: $color-grey-dark;
+  padding: 32px 0 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.actions__item-title {
+  position: relative;
+  z-index: 3;
+}
+
+.actions__item .button {
+  position: relative;
+  z-index: 3;
+}
+
+.actions__item img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.actions__item-overflow {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+}
+
+.actions__item_list {
+  list-style: none;
+
+  li {
+    display: flex;
+    // align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid $color-grey-normal;
+    padding-bottom: 10px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    img {
+      transform: translateY(2px);
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.actions__item-title {
+  font-size: 17px;
+  color: $color-white;
+  font-family: $fontFamilyBold, $fontApple;
+  text-align: center;
+
+}
+
+.action__mark {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .actions__line {
+    width: 100%;
+  }
+  .actions__item {
+    width: 25%;
+    padding: 48px 24px;
+  }
+
+
+  .action__mark {
+    display: block;
+    margin-top: 24px;
+  }
+  .action__mark-date {
+    color: $color-red;
+  }
+
+  .action__mark-line {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .action__mark-form-title {
+    text-align: center;
+    font-size: 24px;
+    font-family: $fontFamilyBold, $fontApple;
+    margin-bottom: 16px;
+  }
+  .action__mark-form {
+    padding: 16px;
+    box-shadow: $box-shadow;
+    border-radius: 6px;
+
+  }
+  .action__mark-banner-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  .action__mark-banner {
+    overflow: hidden;
+    position: relative;
+    min-width: 730px;
+    width: 730px;
+    height: 380px;
+    border-radius: $border-radius;
+    padding: 24px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .48);
+    }
+  }
+  .mark__banner-line {
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(90deg, $color-main 10%, rgba(0, 0, 0, 0) 90%);
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+  }
+  .mark__banner-logo-warp {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mark__banner-logo-warp .icon {
+    max-width: 48px;
+    max-height: 32px;
+  }
+  .mark__banner-line-text {
+    color: #fff;
+    font-size: 16px;
+  }
+  .mark__banner-content {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 2;
+    color: #fff;
+  }
+  .mark__banner-title {
+    font-size: 32px;
+    font-family: $fontFamilyBold, $fontApple;
+    margin-bottom: 16px;
+  }
+  .mark__banner-text {
+    font-size: 20px;
+  }
+  .action__mark-title {
+
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .actions__line {
+    overflow: visible;
+  }
+  .actions__item {
+    cursor: pointer;
+    transition: .32s;
+    border-radius: $border-radius;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}

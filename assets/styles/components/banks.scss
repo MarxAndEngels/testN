@@ -1,0 +1,63 @@
+.banks {
+  @include horizontal-scrollbar;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  gap: 40px;
+}
+
+.bank.f-carousel__slide {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank.f-carousel__slide img {
+  width: 80%;
+}
+
+.bank__img {
+  display: block;
+  max-width: 170px;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .bank.f-carousel__slide {
+    width: 20%;
+    justify-content: flex-start;
+  }
+  .bank.f-carousel__slide img {
+    width: 70%;
+    padding: 0;
+  }
+  .slider__banks .f-carousel__nav {
+    width: 100% !important;
+    left: -12px;
+  }
+  .slider__banks {
+    margin-bottom: 96px;
+  }
+  .slider__banks .f-carousel__nav {
+    display: flex;
+    position: absolute;
+    bottom: -24px;
+    width: 384px;
+    right: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: calc(100% - 80px);
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background: $color-element-light;
+    }
+  }
+}

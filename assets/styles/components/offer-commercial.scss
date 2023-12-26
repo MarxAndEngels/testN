@@ -1,0 +1,130 @@
+.car__buy-options {
+  height: fit-content;
+}
+
+.car__buy-wrap {
+  box-shadow: $box-shadow;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  padding: 0;
+}
+
+
+
+.car__price {
+  border-radius: 4px;
+  font-family: $fontFamilyBold, $fontApple;
+  font-size: 20px;
+  color: $color-red;
+  line-height: 1.5;
+}
+
+.car__old-price {
+  font-size: 16px;
+  position: relative;
+  font-weight: 400;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    background: $color-red;
+  }
+
+  margin: 0 8px;
+}
+
+
+.car__in-stock {
+  display: -webkit-box;
+  display: none;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("~/assets/icons/checked.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+}
+
+
+
+.car__phone-wrap {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.car__phone-number, .car__phone--top {
+  color: $color-black;
+  text-decoration: none;
+  font-family: $fontFamilyBold, $fontApple;
+  font-size: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .car__phone-wrap {
+    padding: 0px;
+  }
+  .car__in-stock {
+    display: flex;
+  }
+  .car__phone-number, .car__phone--top {
+    font-size: 16px;
+  }
+  .car__buy-options {
+    position: sticky;
+    top: 106px;
+  }
+
+
+  .car__price {
+    font-size: 20px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+  }
+  .car__old-price {
+    margin-left: 10px;
+  }
+
+  .car__month-word {
+    display: inline;
+  }
+  .car__phone {
+    font-family: $fontFamilyBold, $fontApple;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+  .car__detail-block {
+    height: 100%;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    max-height: fit-content;
+    display: block;
+  }
+}

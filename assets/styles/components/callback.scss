@@ -1,0 +1,92 @@
+.callback__modal {
+  position: fixed;
+  bottom: 16px;
+  right: 50%;
+  width: 240px;
+  height: 48px;
+  z-index: 10;
+  background: $color-green;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateX(50%);
+  transition: .16s;
+  box-shadow: $box-shadow-green;
+
+  &:after {
+    display: none;
+    content: '';
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: $color-green;
+    animation: pulse 1s infinite ease-in-out;
+    border-radius: 24px;
+  }
+}
+
+.callback__modal-text {
+  color: #fff;
+  width: 160px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  font-size: 18px;
+  transition: .16s;
+}
+
+.callback__modal-phone {
+  fill: #fff;
+  max-width: 24px;
+  max-height: 24px;
+  transition: .16s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+}
+
+.callback__modal-close {
+  fill: $color-body;
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: -8px;
+  top: -16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: $box-shadow;
+  opacity: 0;
+  transition: .16s;
+}
+
+
+.callback__modal--short {
+  width: 48px;
+  right: 16px;
+  transform: translateX(0);
+
+  &:after {
+    display: block;
+  }
+}
+
+.callback__modal--short .callback__modal-close {
+  opacity: 1;
+}
+
+.callback__modal--short .callback__modal-phone {
+  opacity: 1;
+}
+
+.callback__modal--short .callback__modal-text {
+  width: 0;
+}

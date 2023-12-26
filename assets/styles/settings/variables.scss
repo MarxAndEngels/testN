@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Golos';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/golos-regular.woff2') format('woff2'), url('~/assets/fonts/golos-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Golos';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('~/assets/fonts/golos-medium.woff2') format('woff2'), url('~/assets/fonts/golos-medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('~/assets/fonts/golos-bold.woff2') format('woff2'), url('~/assets/fonts/golos-bold.woff') format('woff');
+}
+
+$fontFamily: 'Golos';
+$fontFamilyBold: 'Golos';
+$fontFamilyDop: 'Golos';
+$fontApple: -apple-system, system-ui, BlinkMacSystemFont, “Segoe UI”, Roboto, “Helvetica Neue”, Arial, sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1218px;
+$big-desktop-width: 1440px;
+$desktop-large-width: 1920px;
+$mobile-width-only: 767px;
+$iphone-mini-only: 320px;
+$iphone-se-only: 375px;
+
+
+$color-main: #ec1d24;
+$color-main-dop: #3cb4aa;
+$color-main-dark: darken($color-main, 20);
+$color-main-hover: darken($color-main, 10);
+
+$color-white: #fff;
+$color-black: #393939;
+
+$color-bg-grey: #f7f8fa;
+$color-bg-grey-hover: #dbdee4;
+$color-bg-dark: #333;
+$color-form: #e7e7e7;
+
+$color-grey-light: #f4f4f4;
+$color-grey-normal: #757575;
+$color-grey: #f4f4f4;
+$color-grey--light-alternative: #a5a5a5;
+$color-grey-text: #919399;
+$color-grey-dark: #757575;
+$color-grey-dark-line: #717b9c;
+$color-grey-dark-text: #d2d2d2;
+
+$color-body: #fff;
+$color-block: #fff;
+$color-block-darken: darken($color-block, 4);
+$color-block-hover: lighten($color-block, 12);
+$color-border: #d1d7dc;
+$color-text: #212121;
+$color-text-light: #919399;
+
+
+$color-element: #416388;
+$color-element-darken: darken($color-element, 12);
+$color-element-light: #BED0E8;
+
+$color-element-hover: lighten($color-element, 12);
+
+$color-white: #fff;
+
+$color-grey-text: #919399;
+
+$color-text-gray: #919399;
+
+$color-red: #e23232;
+$color-main: #1466fa;
+$color-red-active: #c51a1a;
+$color-main-light:rgb(232, 236, 255);
+$color-pink: #E91E63;
+$color-purple: #9C27B0;
+$color-green: #62b48a;
+$color-light-green: #8BC34A;
+$color-lime: #CDDC39;
+$color-blue: #2196F3;
+$color-blue-lighten: #90CAF9;
+$color-cyan: #00BCD4;
+$color-teal: #009688;
+$color-yellow: #FFEB3B;
+$color-amber: #FFC107;
+$color-orange: #FF9800;
+$color-deep-orange: #FF5A09;
+$color-brown: #795548;
+$color-blue-grey: #607D8B;
+$color-info: #DEE9FA;
+$color-info-hover: #e1eaf8;
+
+
+$transition-hover: 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+
+$box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+$box-shadow-green: 0 2px 8px rgb(76 175 80 / 32%);
+$box-shadow-hover: 0 2px 8px rgb(0 0 0 / 16%);
+$border-radius: 16px;
+$border-radius-small: 6px;
+$border-radius-smallest: 4px;
+$border-radius-maximum: 24px;
+$border-radius-max: 24px;
+
+:root {
+  --offerCreditColor: transparent;
+}

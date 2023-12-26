@@ -1,0 +1,93 @@
+.buy__options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.buy__options-block {
+  background: #fff;
+  box-shadow: $box-shadow;
+  border-radius: 6px;
+}
+
+.buy__options-top {
+  border-bottom: 1px solid $color-border;
+  padding: 8px;
+
+}
+
+.buy__options-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-family: $fontFamilyBold, $fontApple;
+}
+
+.buy__options-price {
+  font-size: 20px;
+}
+
+.buy__options-price--actual {
+  color: $color-red;
+  font-weight: 900;
+}
+
+.buy__options-price--old {
+  text-decoration: line-through;
+}
+
+.buy__options-credit {
+  text-align: center;
+  font-size: 14px;
+  color: $color-main;
+}
+
+.buy__options-credit span {
+  color: $color-text;
+}
+
+.buy__options-bottom {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buy__options-bottom .button {
+  margin-left: auto;
+}
+
+.buy__options-bottom .nuxt-icon {
+  width: 16px;
+  height: 16px;
+  color: $color-green;
+}
+
+.buy__options-dealer {
+  font-size: 14px;
+}
+
+.buy__options-dealer span {
+  font-family: $fontFamilyBold, $fontApple;
+}
+
+.buy__options-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  box-shadow: $box-shadow;
+  padding: 12px 12px;
+  background-color: $color-white;
+  z-index: 1;
+}
+
+.buy__options-buttons .button {
+  width: calc(50% - 4px);
+}
+
+.buy__options-buttons.buy__options-buttons--solo .button {
+  width: 100%;
+}

@@ -1,0 +1,147 @@
+.selection-new {
+  padding-bottom: 82px;
+  //background-image: url("~/static/img/promo/selection--mobile.webp");
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 24px;
+}
+
+.selection-new__wrap {
+  position: relative;
+  top: 80px;
+}
+
+.selection-new__heading {
+  font-size: 42px;
+  color: $color-white;
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.selection-new__text {
+  font-size: 18px;
+  color: $color-white;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.selection-new__heading, .selection-new__text {
+  // text-align: center;
+}
+
+.selection-new__car {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100%;
+  max-width: 340px;
+  @media screen and (max-width: $iphone-mini-only) {
+    max-width: 276px;
+  }
+}
+
+.selection-new__car--two {
+  display: none;
+}
+
+.selection-new__cars {
+  display: flex;
+  justify-content: center;
+}
+
+.selection-new__form {
+  background-color: #fff;
+  padding: 10px 24px;
+  padding-top: 0;
+  border-radius: 6px;
+  box-shadow: 13px 32px 36px -14px hsla(0, 0%, 70.2%, .3);
+
+  .form {
+    box-shadow: none;
+    padding: 0;
+    padding-top: 4px;
+  }
+}
+
+.service__approve-banner {
+  padding: 16px 48px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    //background-image: url("~/static/img/promo/fsspp-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  box-shadow: $box-shadow;
+  background-color: #fff;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-radius: 6px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-family: $fontFamilyBold, $fontApple;
+  line-height: 1.5;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.service__approve-text {
+  display: -webkit-box;
+  display: flex;
+  font-size: 14px;
+  margin-right: 16px;
+  justify-content: center;
+  align-items: center;
+
+  .tippy {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .selection-new__car--two {
+    position: relative;
+    left: -45px;
+    display: block;
+    width: 100%;
+    width: 300px;
+  }
+  .service__approve-text {
+    .tippy {
+      display: block;
+    }
+  }
+  .selection-new__text {
+    padding-left: 10px;
+  }
+  .selection-new__wrap {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    top: 60px;
+  }
+  .selection-new__cars {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    top: 8px;
+  }
+  .selection-new {
+    background-position: 50%;
+    //background-image: url("~/public/img/promo/selection.webp");
+    background-size: 100% 400px;
+    margin-bottom: 80px;
+  }
+}

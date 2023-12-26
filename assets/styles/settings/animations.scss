@@ -1,0 +1,140 @@
+
+
+
+.benefit-enter-active,
+.benefit-leave-active {
+  transition: 0.32s;
+}
+
+.benefit-enter-from,
+.benefit-leave-to {
+  opacity: 0;
+}
+
+.filters-enter-active,
+.filters-leave-active {
+  transition: 0.32s;
+}
+
+.filters-enter-from,
+.filters-leave-to {
+  transform: translateY(100%);
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: 0.16s ease-in-out;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  transform: translateX(-100%);
+}
+
+.marks-enter-active {
+  transition: 0.24s;
+}
+
+.marks-leave-active {
+}
+
+.marks-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.marks-leave-to {
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.32s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.sort-enter-active {
+}
+
+.sort-leave-active {
+  transition: 0.16s;
+  transform: translateX(-32px);
+  opacity: 0;
+}
+
+//
+//.sort-enter,
+//.sort-leave-active {
+//  opacity: 0;
+//}
+@keyframes mouse {
+  0% {
+    bottom: 20%;
+  }
+  100% {
+    bottom: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes autoteka-loader {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slider-element {
+  0% {
+    transform: rotate(10deg) translatey(0);
+  }
+  50% {
+    transform: rotate(10deg) translatey(-20px);
+  }
+  100% {
+    transform: rotate(10deg) translatey(0);
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .modal-enter,
+  .modal-leave-to {
+    transform: none;
+    opacity: 0;
+  }
+}

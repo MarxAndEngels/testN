@@ -1,0 +1,207 @@
+.popular-marks {
+  margin-top: 16px;
+  position: relative;
+  background: $color-grey;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 0;
+  padding-bottom: 0;
+}
+
+.popular__mark {
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.popular__mark-count {
+  color: $color-text-light;
+}
+
+.popular-marks .popular-marks-list {
+  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px;
+  list-style: none;
+
+  // overflow-y: scroll;
+  // @include vertical-scrollbar;
+}
+
+.popular__mark .nuxt-icon svg {
+  width: 32px;
+  height: 24px;
+  color: $color-element;
+}
+
+.popular__mark-used {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  border: 1px solid $color-grey-dark;
+  padding: 8px;
+  text-decoration: none;
+  color: $color-black;
+  font-size: 12px;
+  min-width: 140px;
+  width: 140px;
+  align-items: center;
+}
+
+.popular__mark-block {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular__mark-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular__mark .nuxt-icon svg {
+  width: 32px;
+  height: 48px;
+}
+
+.popular__mark--kia .nuxt-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popular__mark--renault .nuxt-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.popular__mark--nissan .nuxt-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popular__mark--uaz .nuxt-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popular__mark--chery .nuxt-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popular__mark--toyota .nuxt-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.popular__mark--haval .nuxt-icon svg,
+.popular__mark--exeed .nuxt-icon svg,
+.popular__mark--omoda .nuxt-icon svg,
+.popular__mark--moskvich .nuxt-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .popular__mark {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+
+  .popular-marks-list {
+    justify-content: space-between;
+  }
+
+  .popular-marks--used.popular-marks {
+    margin-top: 16px;
+    padding: 24px 0;
+  }
+
+  .popular__mark-item-used {
+    width: calc(50% - 8px);
+
+    &:not(:last-child) {
+      flex-grow: 1;
+    }
+  }
+
+  .popular-marks {
+    padding: 16px 0;
+  }
+
+  .popular__mark-used {
+    width: 100%;
+    height: 48px;
+    justify-content: flex-start;
+  }
+
+  .popular-marks--used .popular__mark-block {
+    gap: 2px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .popular-marks {
+    margin-top: 0;
+    padding: 16px;
+    padding-bottom: 0;
+  }
+
+  .popular__mark-used {
+    margin-bottom: 16px;
+  }
+
+  .popular-marks .popular-marks-list {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    align-items: center;
+    row-gap: 0;
+  }
+  .popular-marks--used .popular-marks-list {
+    column-count: 6;
+  }
+
+  .popular__mark-used {
+    transition: 0.16s;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $color-element;
+    }
+  }
+
+  .popular-marks .popular-marks-list {
+    width: 100%;
+    padding-bottom: 16px;
+    max-width: 100%;
+    -moz-column-count: 6;
+    column-count: 6;
+    display: block;
+  }
+
+  .popular__mark-used {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: $desktop-large-width) {
+  .popular-marks .popular-marks-list {
+    -moz-column-count: 8;
+    column-count: 8;
+  }
+}

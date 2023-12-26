@@ -1,0 +1,51 @@
+.tech {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.tech-item .nuxt-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tech-item .nuxt-icon svg {
+  color: $color-red;
+  width: 100%;
+  height: 100%;
+}
+
+.tech--inline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  z-index: 0;
+}
+
+.tech--inline .tech-item {
+  padding: 16px 0;
+  border-bottom: 1px solid $color-grey;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .tech--inline {
+    padding: 0 16px;
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+    margin-bottom: 16px;
+  }
+}

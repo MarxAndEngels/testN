@@ -1,0 +1,204 @@
+.folder {
+
+}
+
+.folder__render {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder__render img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+}
+
+.folder__colors {
+  margin-top: 24px;
+  width: 100%;
+  margin-left: -16px;
+  padding: 0 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.folder__colors-item {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .24);
+  cursor: pointer;
+  border: 1px solid $color-border;
+}
+
+.folder__colors-item--active {
+  outline: 2px solid $color-red;
+}
+
+
+.folder__modifications {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.folder__modification-title {
+  font-family: $fontFamilyBold, $fontApple;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+
+.folder__complectation {
+  border-bottom: 1px solid $color-border;
+  position: relative;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.folder__complectation-head {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  padding: 8px 16px;
+  position: sticky;
+  top: 56px;
+  background: $color-grey-light;
+  z-index: 1;
+}
+
+.folder__complectation-buttons {
+  display: flex;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.folder__complectation-buttons .button {
+  width: calc(50% - 4px);
+}
+
+.folder__complectation-arrow {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  opacity: .64;
+  transition: .16s;
+  color: $color-black;
+}
+
+.folder__complectation--active .folder__complectation-arrow {
+  transform: rotate(180deg);
+  top: 32px;
+}
+
+.folder__complectation-equipment {
+  display: none;
+  box-shadow: $box-shadow;
+  padding: 0 16px;
+  margin-top: 12px;
+}
+
+.folder__complectation--active .folder__complectation-equipment {
+  display: block;
+}
+
+.folder__complectation-equipment-title {
+  font-family: $fontFamilyBold, $fontApple;
+}
+
+.folder__complectation-equipment-item {
+  padding: 12px 0;
+  border-bottom: 1px solid $color-border;
+}
+
+.folder__complectation-title {
+  font-family: $fontFamilyBold, $fontApple;
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.folder__complectation-prices {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.folder__complectation-price--actual {
+  color: $color-red;
+  font-weight: 900;
+  font-family: $fontFamilyBold, $fontApple;
+}
+
+.folder__complectation-price--old {
+  color: $color-grey-text;
+  text-decoration: line-through;
+}
+
+.folder__complectation-equipment-title {
+  display: none;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .folder__complectation {
+    cursor: pointer;
+    background: $color-grey;
+    padding: 24px;
+    border-radius: 6px;
+  }
+  .folder__modification-title {
+    font-size: 16px;
+  }
+  .folder__complectation-title {
+    font-size: 18px;
+  }
+  .folder__complectation-price {
+    font-size: 18px;
+  }
+
+  .folder__render {
+    padding: 32px 120px;
+  }
+  .folder__colors {
+    margin: 24px 0;
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .folder__complectation-arrow {
+    right: 24px;
+  }
+  .folder__complectation-equipment {
+    width: 100%;
+    background: $color-white;
+    gap: 32px;
+    font-size: 14px;
+  }
+  .folder__complectation--active .folder__complectation-equipment {
+    display: flex;
+  }
+  .folder__complectation-equipment-list {
+    display: inline-block;
+    -moz-column-count: 2;
+    column-count: 2;
+    padding: 16px 0;
+  }
+  .folder__complectation-equipment-title {
+    display: block;
+    padding: 16px 0;
+  }
+  .folder__complectation-equipment-title span {
+    color: $color-grey-dark;
+    font-size: 12px;
+  }
+  .folder__complectation-equipment-item {
+    border: none;
+  }
+}

@@ -1,0 +1,93 @@
+@mixin grid-item {
+
+}
+
+@mixin box-shadow-hover {
+  cursor: pointer;
+  transition: .24s;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 13%);
+  &:hover {
+    box-shadow: 0 26px 50px -27px rgb(0 0 0 / 62%);
+  }
+}
+
+
+@mixin horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 16px;
+  scroll-padding-right: 16px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+
+  padding: 16px 16px;
+  margin: -16px 0;
+  padding-right: 0;
+
+  -ms-scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 8px;
+    flex-shrink: 0;
+  }
+}
+
+@mixin horizontal-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+@mixin vertical-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+@mixin lazyload {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-hover;
+  will-change: opacity;
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin lazyloaded {
+  opacity: 1;
+  visibility: visible;
+  transition: $transition-hover;
+  -webkit-backface-visibility: visible;
+}
+
+@mixin text {
+  font-family: $fontFamily;
+  font-size: 12px;
+  @media screen and (min-width: $desktop-width) {
+    font-size: 16px;
+  }
+}
+
+@mixin title {
+  font-family: $fontFamily;
+  font-size: 32px;
+  @media screen and (min-width: $desktop-width) {
+    font-size: 64px;
+  }
+}

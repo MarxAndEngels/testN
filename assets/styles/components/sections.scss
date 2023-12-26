@@ -1,0 +1,129 @@
+.section {
+  margin-top: 24px;
+}
+
+.section--credit .heading--h1 {
+  color: $color-white;
+}
+
+.section--credit .heading__dop {
+  color: $color-white;
+}
+
+.section .text__p {
+  margin: 24px 0;
+}
+
+.section--promotions .section {
+  margin: 0;
+}
+
+.section--promotions h2 {
+  display: none;
+}
+
+.section--credit .block__text {
+  color: $color-white;
+}
+
+.section--trade-in .heading--h1 {
+  color: $color-element;
+}
+
+.section--trade-in .block__text {
+  margin-left: auto;
+}
+
+.section--100vh {
+  height: 100vh;
+  position: relative;
+  margin-top: -82px;
+  background: linear-gradient(
+    0,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(255, 255, 255, 0) 32%
+  );
+}
+
+.section--margin-40 {
+  margin-top: 24px;
+}
+
+.section--100vh .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+.section__block-image {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  left: 0;
+  object-position: top;
+}
+
+@media (max-width: $mobile-width-only) {
+  .section--index-popular {
+    margin-bottom: 72px;
+  }
+
+  .section--banks {
+    margin-bottom: 72px;
+  }
+
+  .section__block-image {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .section--new-model .crumbs,
+  .section--mark-new .crumbs {
+    display: block;
+  }
+
+  .section--credit,
+  .section--trade-in {
+    height: 560px;
+  }
+
+  .section--offer-used,
+  .section--offer-new,
+  .section--new-model {
+    margin-top: 0px;
+  }
+
+  .section--mark-new {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .section {
+    margin-top: 80px;
+  }
+
+  .section--credit,
+  .section--trade-in {
+    height: 720px;
+  }
+
+  .section--margin-40 {
+    margin-top: 40px;
+  }
+  .section--100vh {
+    width: 120vw;
+    margin-left: -20vw;
+    margin-top: -84px;
+  }
+
+  .section--trade-in .block__text {
+    margin-left: auto;
+    margin-right: 120px;
+  }
+}

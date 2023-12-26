@@ -1,0 +1,24 @@
+.text__wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: $color-block;
+  border-radius: $border-radius-smallest;
+  color: $color-text;
+}
+
+.text__p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.text__p-bold {
+
+}
+
+.text__p-link {
+  color: $color-blue;
+}

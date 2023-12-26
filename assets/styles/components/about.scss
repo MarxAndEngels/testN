@@ -1,0 +1,54 @@
+.about {
+  margin-top: 32px;
+}
+
+.about__banner {
+  position: relative;
+  margin-top: 12px;
+}
+
+.about__banner .container {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+}
+
+.about__img {
+  width: 100%;
+  position: relative;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__slider .f-carousel__slide {
+  overflow: hidden;
+}
+
+.about__text {
+  height: max-content;
+  border-bottom: 1px solid $color-element-light;
+}
+
+@media (min-width: $desktop-width) {
+  .about__banner .container {
+    position: absolute;
+  }
+
+  .about__banner .benefits {
+    position: absolute;
+    left: 113px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+  }
+
+  .about .text__p {
+    margin-top: 0;
+  }
+}

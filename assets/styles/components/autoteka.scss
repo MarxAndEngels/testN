@@ -1,0 +1,104 @@
+.autoteka {
+  background: #fff;
+}
+
+.autoteka__info {
+}
+
+.autoteka__logo {
+  width: 180px;
+}
+
+.autoteka__title {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.autoteka__description {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.autoteka__date {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.autoteka__offer {
+  margin-top: 16px;
+}
+
+.autoteka__offer-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.autoteka__offer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+
+  div {
+    &:nth-child(1) {
+      font-size: 14px;
+      color: $color-text-gray;
+    }
+  }
+}
+
+.autoteka__offer-vin-text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 16px;
+}
+
+.autoteka__blocks {
+  margin-top: 24px;
+}
+
+.autoteka__block {
+  margin-bottom: 16px;
+  padding-left: 18px;
+}
+
+.autoteka__block-title {
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 6px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    width: 12px;
+    top: 4px;
+    height: 12px;
+    border-radius: 16px;
+    background: $color-green
+  }
+}
+
+.autoteka__block-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.autoteka__loader {
+  width: 100%;
+  padding: 16px;
+}
+
+.autoteka__loader-line {
+  background: $color-element;
+  height: 8px;
+  animation: autoteka-loader 1s ease-in-out;
+}
+
+.autoteka__loader-text {
+  font-size: 14px;
+  margin-bottom: 8px;
+}

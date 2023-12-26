@@ -1,0 +1,44 @@
+.heading {
+  font-family: $fontFamilyBold, $fontApple;
+  margin-top: 16px;
+}
+
+.heading--h1 {
+  margin: 16px 0;
+  font-size: 18px;
+}
+
+.heading--h2 {
+  margin: 16px 0;
+  font-size: 18px;
+}
+
+.express-heading {
+  padding-top: 0;
+  margin-bottom: 2px;
+  margin-top: 0;
+  text-align: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $color-main;
+    transform: translateY(4px);
+  }
+}
+
+.heading--h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-grey-dark;
+  margin-top: 0;
+}
+
+.heading--h3-mt {
+  margin-top: 4px;
+}
+
+.heading--form {
+  font-family: $fontFamilyBold, $fontApple;
+  color: $color-black;
+}

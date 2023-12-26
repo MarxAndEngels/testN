@@ -1,0 +1,37 @@
+.filter__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filter__list .button {
+  margin-top: 32px;
+}
+
+.filters__tabs {
+  width: 100%;
+  display: flex;
+  margin-top: 32px;
+  display: none;
+}
+
+.filters__tabs .button {
+  flex: 1;
+}
+
+@media (max-width: $mobile-width-only) {
+  .filter__list {
+    margin-bottom: 32px;
+  }
+
+  .filter__list .button {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .filters__tabs {
+    margin-top: 0;
+  }
+}

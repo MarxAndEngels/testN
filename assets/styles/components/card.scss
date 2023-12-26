@@ -1,0 +1,395 @@
+.mini__card {
+  width: 100%;
+  min-width: 320px;
+  text-decoration: none;
+}
+
+.mini__card--folder {
+  &:hover .mini__card-body,
+  &:hover .mini__card-header--folder,
+  &:hover .mini__card-image-wrapper {
+    background-color: $color-grey-dark;
+  }
+
+  &:hover .mini__card-image-wrapper img {
+    transform: translateX(4px);
+  }
+}
+
+.mini__card-image-wrapper img {
+  transition: all 0.3s;
+}
+
+.mini__card--folder {
+  max-width: 400px;
+}
+
+.mini__card--form {
+  width: 100%;
+  min-width: 100%;
+}
+
+.mini__card-body {
+  background: $color-grey;
+  border: 1px solid $color-border;
+  border-top: none;
+  padding: 16px 12px;
+  transition: all 0.3s;
+}
+
+.mini__card-footer {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.mini__card-footer .button {
+  width: 50%;
+}
+
+.mini__card-footer--folder .button {
+  width: 100%;
+}
+
+.mini__card-footer--folder .button {
+  width: 100%;
+}
+
+.mini__card-footer--form .button {
+  width: 100%;
+}
+
+.mini__card-name {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 4px;
+  row-gap: 2px;
+}
+
+.mini__card-name-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini__card-folder {
+  color: $color-element;
+  font-size: 16px;
+}
+
+.mini__card-like .nuxt-icon svg {
+  width: 32px;
+  height: 24px;
+  max-width: 32px;
+  max-height: 32px;
+  color: $color-element-light;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.mini__card-name-year {
+  margin-left: auto;
+  font-size: 12px;
+  color: $color-black;
+}
+
+.mini__card-name-mark {
+  @include text;
+  color: $color-black;
+  font-family: $fontFamilyDop;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.mini__card-name-sub {
+  color: $color-element;
+  font-size: 16px;
+
+  &:nth-of-type(3) {
+    color: $color-element-light;
+  }
+}
+
+.mini__card-price-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.mini__card-price-wrapper--new {
+  flex-direction: row-reverse;
+}
+
+.mini__card-price {
+  font-size: 18px;
+  color: $color-black;
+}
+
+.mini__card-price-old {
+  font-size: 16px;
+  color: $color-text;
+  text-decoration: line-through;
+}
+
+.mini__card-price-credit {
+  font-size: 14px;
+  color: $color-element;
+}
+
+.mini__card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 16px;
+  color: $color-element;
+}
+
+.mini__card-tech-item {
+  padding: 0 4px;
+  border-right: 1px solid $color-element-light;
+
+  &:first-child {
+    padding: 0 4px 0 0;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.mini__card-lines {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.mini__card-line {
+  width: 60%;
+  height: 2px;
+  opacity: 0.8;
+  margin-left: -12px;
+  background: linear-gradient(90deg, $color-element-light, transparent);
+}
+
+.mini__card-slider {
+  position: relative;
+}
+
+.mini__card-image-wrapper {
+  display: block;
+  width: 100%;
+  background: $color-grey;
+  border: 1px solid $color-border;
+  border-top: none;
+  border-bottom: none;
+  transition: all 0.3s;
+}
+
+.mini__card-image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mini__card--folder .mini__card-image-wrapper img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  object-position: bottom;
+  position: relative;
+  bottom: 24px;
+}
+
+.mini__card-slider-desktop {
+  display: none;
+}
+
+.mini__card-slider-mobile {
+  @include horizontal-scrollbar;
+  height: 260px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 8px;
+}
+
+.mini__card-slide {
+  min-width: 320px;
+  border: 1px solid $color-border;
+  border-bottom: none;
+}
+
+.mini__card-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mini__card-header--new {
+  padding: 8px;
+  border: 1px solid $color-border;
+  background: $color-grey;
+  border-bottom: 0;
+}
+
+.mini__card-header--folder {
+  padding: 8px;
+  border: 1px solid $color-border;
+  background: $color-grey;
+  border-bottom: 0;
+  transition: all 0.3s;
+}
+
+.mini__card-slider--render {
+  background: $color-grey;
+  border: 1px solid $color-border;
+  border-bottom: none;
+}
+
+.mini__card-slider--render img {
+  object-fit: contain !important;
+  padding: 16px;
+}
+
+@media (max-width: $iphone-mini-only) {
+  .mini__card {
+    min-width: 100%;
+  }
+
+  .mini__card-slide {
+    min-width: 260px;
+  }
+
+  .mini__card-slider-mobile {
+    height: 172px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .mini__card-slider-mobile {
+    display: none;
+  }
+  .mini__card-slider-desktop {
+    display: block;
+    cursor: pointer;
+  }
+  .mini__card-slider-desktop img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.4;
+    object-fit: cover;
+  }
+
+  .mini__card-name-sub {
+    font-size: 0.8vw;
+  }
+  //стили десктопной карточки для бу
+  .mini__card--by {
+    width: calc(25% - 12px);
+    min-width: auto;
+  }
+  .mini__card--by .mini__card-body {
+    padding: 0.4vw;
+  }
+  .mini__card-price-wrapper {
+    margin-top: 0.8vw;
+    gap: 0.4vw;
+  }
+  .mini__card-name {
+    column-gap: 0.2vw;
+    row-gap: 0.1vw;
+  }
+  .mini__card--by .mini__card-tech {
+    font-size: 0.8vw;
+  }
+  .mini__card--by .mini__card-name-mark {
+    font-size: 0.76vw;
+  }
+  .mini__card-lines {
+    margin-top: 0.8vw;
+    gap: 0.2vw;
+  }
+  .mini__card--by .mini__card-line {
+    margin-left: -0.4vw;
+  }
+  //стили десктопной карточки для новых
+  .mini__card--new {
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mini__card--new .mini__card-image-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-border;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .mini__card--horizontal {
+    display: flex;
+    gap: 0.8vw;
+    width: 100%;
+    overflow: hidden;
+    background: $color-grey;
+  }
+  .mini__card--horizontal .mini__card-header {
+    width: calc(50% - 0.4vw);
+  }
+  .mini__card--horizontal .mini__card-body-wrapper {
+    width: calc(50% - 0.4vw);
+  }
+  .mini__card-price {
+    font-size: 1vw;
+  }
+  .mini__card-price-credit {
+    font-size: 0.8vw;
+  }
+  .mini__card-tech-item {
+    padding: 0 0.2vw;
+
+    &:first-child {
+      padding: 0 0.2vw 0 0;
+    }
+  }
+  .mini__card--horizontal .mini__card-slider {
+    height: 100%;
+  }
+  .mini__card--horizontal .mini__card-body {
+    background: none;
+  }
+  .mini__card--horizontal .mini__card-slider-desktop {
+    height: 100%;
+  }
+  .mini__card--horizontal .mini__card-lines {
+    margin-left: -0.8vw;
+  }
+  .mini__card--horizontal .mini__card-body {
+    border: none;
+  }
+  .mini__card--horizontal .mini__card-footer {
+    padding: 0.4vw;
+  }
+
+  .mini__card-name-mark {
+    font-size: 18px;
+  }
+
+  // .mini__card {
+  //   &:hover .mini__card-slider-desktop {
+  //     background-color: $color-element;
+  //   }
+  // }
+}

@@ -1,0 +1,228 @@
+.marks__block .button--more {
+  display: block;
+}
+
+.list__marks-wrapper .button {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 8px;
+  width: 100%;
+}
+
+.list__marks {
+  margin-bottom: 8px;
+}
+
+.list__title {
+  display: none;
+}
+
+.list__folders, .list__generations {
+  margin-top: 16px;
+}
+
+.list__folders, .list__generations {
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.list__header {
+  display: none;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  text-overflow: ellipsis;
+  width: calc(100% - 128px);
+  position: relative;
+  height: 100%;
+  padding-right: 16px;
+  -webkit-box-shadow: -24px 0px 32px -24px rgba(34, 60, 80, 0.12) inset;
+  -moz-box-shadow: -24px 0px 32px -24px rgba(34, 60, 80, 0.12) inset;
+  box-shadow: -24px 0px 32px -24px rgba(34, 60, 80, 0.12) inset;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+
+.list__header--active {
+  display: flex;
+}
+
+.list__tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  white-space: nowrap;
+  padding: 8px 16px;
+  gap: 16px;
+  text-decoration: none;
+  width: calc(50% - 4px);
+  font-size: 14px;
+}
+
+.list__tab .nuxt-icon {
+  width: 24px;
+  height: 24px;
+  color: $color-black;
+}
+
+.list__tab--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background: none;
+  text-decoration: none;
+  border-radius: $border-radius-smallest;
+  font-size: 16px;
+  gap: 6px;
+}
+
+.list__tab--active {
+  //background: $color-bg-grey-hover;
+}
+
+.list__tab--header.list__tab--active {
+  background: none;
+}
+
+.list__tab--header.list__tab--active .list__tab-name {
+  color: $color-main;
+}
+
+.list__tab--header.list__tab--active .list__tab-number {
+  color: $color-main;
+}
+
+.list__tab--mark {
+  width: calc(50% - 4px);
+}
+
+.list__tab_wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.list__tab-descr{
+  font-size: 12px;
+  color: $color-black;
+}
+
+.list__tab_icon{
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.list__tab-name {
+  color: $color-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list__tab--active{
+  background: $color-bg-grey-hover;
+}
+// .list__tab--active .list__tab--mark {
+//   background: $color-red;
+// }
+
+// .list__tab--active .list__tab-number {
+//   color: $color-red;
+// }
+
+
+.list__tab-number {
+  color: $color-text-gray;
+}
+
+.list__marks-wrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .list__title {
+    display: block;
+  }
+
+  .list__marks.list__marks--mobile {
+    display: none;
+  }
+  .list__marks {
+    display: inline-block;
+    column-count: 6;
+    padding: 16px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin-bottom: 16px;
+
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+page-break-inside: avoid; /* Firefox */
+break-inside: avoid; /* IE 10+ */
+break-inside: avoid-column;
+  }
+  .list__header {
+    display: flex;
+  }
+  .list__folders {
+    flex-direction: row;
+  }
+  .list__folders .list__tab {
+    width: auto;
+    border: 1px solid $color-grey;
+    font-size: 14px;
+
+    &:hover {
+      background: initial;
+      border: 1px solid $color-main;
+    }
+  }
+  .list__title {
+    padding: 8px 16px;
+  }
+  .list__tab {
+    justify-content: space-between;
+  }
+  .list__tab {
+    transition: .16s ease-in-out;
+    border: none;
+
+    &:hover {
+      background: $color-bg-grey-hover;
+    }
+  }
+  .list__tab--header {
+    &:hover {
+      background: none;
+
+      .list__tab-name {
+        transition: .16s;
+        color: $color-main;
+      }
+    }
+
+  }
+  .list__tab--mark {
+    width: auto;
+    margin-bottom: 8px;
+    transition: .24s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 14px;
+    gap: 16px;
+    border: 1px solid $color-form;
+  }
+}

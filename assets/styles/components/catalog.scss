@@ -1,0 +1,8 @@
+@media screen and (min-width: $desktop-width) {
+  .catalog__offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}

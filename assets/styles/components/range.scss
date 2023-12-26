@@ -1,0 +1,101 @@
+
+.slider-horizontal {
+  height: 8px !important;
+}
+
+.slider-base {
+  background: $color-white !important;
+  border: 1px solid $color-border;
+}
+
+.slider-connect {
+  background: $color-main !important;
+}
+
+.slider-horizontal .slider-handle {
+  width: 32px !important;
+  height: 32px !important;
+  top: -13px !important;
+  border: 4px solid #fff;
+  background: $color-main !important;
+  box-shadow: none !important;
+  z-index: 10;
+  right: calc(var(--slider-handle-width, 32px) / 2 * -1) !important;
+}
+
+.slider-tooltip {
+  //bottom: -24px !important;
+  background: none !important;
+  border: none !important;
+  color: $color-black !important;
+  font-size: 10px !important;
+
+  &:before {
+    display: none !important;
+  }
+}
+
+.slider-horizontal .slider-tooltip-bottom {
+  top: 12px !important;
+}
+
+.range {
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.range__inputs {
+  display: flex;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-bottom: 16px;
+  gap: 1px;
+  background: $color-white;
+}
+
+.range__select {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 48px;
+  background: $color-white;
+  padding: 0 12px;
+  appearance: none;
+  position: relative;
+
+  &:first-child {
+    border-right: 1px solid $color-element-light;
+  }
+}
+
+.range__input {
+  background: $color-white;
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.range .slider-tooltip {
+  top: 20px !important;
+  font-weight: 400 !important;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .range__select {
+    background: $color-white;
+  }
+  .range__inputs {
+    width: 100%;
+    margin-left: 0;
+  }
+  .range__input {
+    background: $color-white;
+  }
+  .range {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: -16px;
+  }
+}
