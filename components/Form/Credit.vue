@@ -2,14 +2,14 @@
   <div class="form">
     <div class="form__controls">
       <div class="form__controls-item">
-        <Select has-alphabet @select="handlerSelect" :options="marks" title="марка" type="mark" :value="mark"/>
+        <Select has-alphabet @select="handlerSelect" :options="marks" title="Марка" type="mark" :value="mark"/>
       </div>
       <div class="form__controls-item">
-        <Select has-alphabet @select="handlerSelect" :options="folders" title="модель" type="folder"
+        <Select has-alphabet @select="handlerSelect" :options="folders" title="Модель" type="folder"
                 :value="chosenFolder"/>
       </div>
       <div class="form__controls-item">
-        <Select @select="handlerSelect" :options="complectations" title="комплектация" type="complectation"
+        <Select @select="handlerSelect" :options="complectations" title="Комплектация" type="complectation"
                 :value="complectation"/>
       </div>
       <div class="form__controls-item" v-if="colors && colors.length">
@@ -64,7 +64,7 @@
       </div>
       <div class="form__controls-item" :class="{'error':error === 'phone'}">
         <Input :value="form.phone"
-               @update:modelValue="newValue => form.phone = newValue" placeholder="телефон" type="tel" mask="phone"
+               @update:modelValue="newValue => form.phone = newValue" placeholder="Телефон" type="tel" mask="phone"
                :error="false"/>
       </div>
       <div class="form__controls-item">

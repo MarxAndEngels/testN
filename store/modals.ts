@@ -34,12 +34,23 @@ export type ModalType = {
     type: string
 }
 
+export type ModalTextType = {
+    open: boolean
+    title: string
+    text?: string
+}
+
 export const useModals = defineStore('modals', {
     state: () => ({
         modal: <ModalType>{
             open: false,
             title: '',
             type: ''
+        },
+        modalText: <ModalTextType>{
+            open: false,
+            title: '',
+            text: '',
         },
         modalOffer: <ModalOfferType | null>null
     }),
@@ -48,6 +59,11 @@ export const useModals = defineStore('modals', {
         async openModal(payload: ModalType) {
             this.modal = payload
         },
+        async openModalText(payload: ModalTextType) {
+
+            this.modalText = payload
+        },
+
         async closeModal() {
             this.modal.open = false
             setTimeout(() => {
@@ -55,6 +71,13 @@ export const useModals = defineStore('modals', {
                 this.modal.type = ''
                 this.modal.text = ''
                 this.modalOffer = null
+            }, 100)
+        },
+        async closeModalText() {
+            this.modalText.open = false
+            setTimeout(() => {
+                this.modalText.title = ''
+                this.modalText.text = ''
             }, 100)
         },
 

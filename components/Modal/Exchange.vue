@@ -6,15 +6,15 @@
       </div>
       <div class="form__control">
         <Input :value="form.client_mark"
-               @update:modelValue="newValue => form.client_mark = newValue" placeholder="марка" :error="false"/>
+               @update:modelValue="newValue => form.client_mark = newValue" placeholder="Марка" :error="false"/>
       </div>
       <div class="form__control">
         <Input :value="form.client_folder"
-               @update:modelValue="newValue => form.client_folder = newValue" placeholder="модель" :error="false"/>
+               @update:modelValue="newValue => form.client_folder = newValue" placeholder="Модель" :error="false"/>
       </div>
       <div class="form__control">
         <Input mask="number" :value="form.client_year"
-               @update:modelValue="newValue => form.client_year = newValue" placeholder="год" :error="false"/>
+               @update:modelValue="newValue => form.client_year = newValue" placeholder="Год" :error="false"/>
       </div>
     </div>
     <div class="modal__line">
@@ -55,7 +55,7 @@
       </div>
       <div class="form__control" :class="{'error':error === 'phone'}">
         <Input :value="form.phone"
-               @update:modelValue="newValue => form.phone = newValue" placeholder="телефон" type="tel" mask="phone"
+               @update:modelValue="newValue => form.phone = newValue" placeholder="Телефон" type="tel" mask="phone"
                :error="false"/>
       </div>
       <div class="form__control">

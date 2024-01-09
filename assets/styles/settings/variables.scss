@@ -33,8 +33,10 @@ $mobile-width-only: 767px;
 $iphone-mini-only: 320px;
 $iphone-se-only: 375px;
 
+$color-main: #c69415;
+$color-gradient-first: #ED1C24;
+$color-gradient-second: #FDB913;
 
-$color-main: #ec1d24;
 $color-main-dop: #3cb4aa;
 $color-main-dark: darken($color-main, 20);
 $color-main-hover: darken($color-main, 10);
@@ -78,7 +80,6 @@ $color-grey-text: #919399;
 $color-text-gray: #919399;
 
 $color-red: #e23232;
-$color-main: #1466fa;
 $color-red-active: #c51a1a;
 $color-main-light:rgb(232, 236, 255);
 $color-pink: #E91E63;

@@ -47,6 +47,7 @@ import {definePageMeta} from '#imports'
 import {renderSeoTemplate} from "~/composables/seo";
 import {useRoute} from "vue-router";
 import Crumbs from "~/components/Crumbs/index.vue";
+import {useSort} from "~/store/sort";
 
 const {isMobile, isDesktop} = useDevice();
 const route = useRoute()
@@ -63,6 +64,10 @@ onMounted(() => {
     scrollToElement('#form', 0)
   }
 })
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
 
 
 const seoTags = renderSeoTemplate(`credit-${route.params.category}`)

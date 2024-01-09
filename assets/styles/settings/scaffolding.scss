@@ -70,6 +70,9 @@ h2 {
 
 .container__block {
   position: relative;
+  .catalog__offers{
+    margin-top: 0px;
+  }
 }
 
 .container__block .heading {
@@ -82,8 +85,14 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: -16px;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-size: 20px;
+  //text-transform: uppercase;
+}
+
+@media screen and (max-width: $mobile-width-only) {
+  .container__block .heading {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {

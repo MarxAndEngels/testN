@@ -11,7 +11,7 @@
           {{ option.name || option.title || option }}
         </option>
       </select>
-      <nuxt-icon name="select-arrow"/>
+<!--      <nuxt-icon name="select-arrow"/>-->
     </div>
 
 
@@ -19,7 +19,7 @@
       <div class="filter__select-data">
         <span>{{ currentTitle }}</span>
       </div>
-      <nuxt-icon name="arrow-select"/>
+<!--      <nuxt-icon name="arrow-select"/>-->
       <div class="select__options" :class="{'select__options--open':isOpen}">
         <div @click.prevent="optionClick(option)" class="select__option" v-for="option in options">
           {{ option.title }}

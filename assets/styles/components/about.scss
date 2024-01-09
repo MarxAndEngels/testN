@@ -1,5 +1,9 @@
 .about {
   margin-top: 32px;
+  box-shadow: $box-shadow;
+  padding: 16px;
+  border-radius: $border-radius-smallest;
+  margin-bottom: 16px;
 }
 
 .about__banner {
@@ -44,7 +48,7 @@
 
   .about {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    //grid-template-columns: 2fr 1fr;
     gap: 16px;
   }
 

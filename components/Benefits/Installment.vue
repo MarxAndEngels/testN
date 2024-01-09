@@ -3,7 +3,7 @@
     <div class="benefits__line">
       <div class="benefits__item"
            v-for="(benefit, index) in benefits" :key="index"
-           @click="openModal(benefit.description)">
+           @click="openModalHandler(benefit.text ,benefit.description)">
         <!--                <svg-icon :name="`benefits/${benefit.slug}`"/>-->
         <div class="benefits__item-title"> {{ benefit.text }}</div>
         <div class="benefits__item-description"> {{ benefit.description }}</div>
@@ -14,9 +14,7 @@
 <script setup lang="ts">
 import {ref} from "#imports"
 import {BenefitType} from "~/app/types/benefit";
-
-let modal = ref<boolean>(false)
-let description = ref<string>('')
+import {useModals} from "~/store/modals";
 
 const benefits: BenefitType[] = [
   {
@@ -42,14 +40,15 @@ const benefits: BenefitType[] = [
 
 ]
 
+const modal = useModals()
 
-const openModal = async (benefit: string) => {
-  description.value = benefit
-  modal.value = true
-}
-const closeModal = async () => {
-  description.value = ''
-  modal.value = false
+const openModalHandler = (title: string, text: string) => {
+  let payload = {
+    open: true,
+    title: title.replace('</br>',''),
+    text: text
+  }
+  useModals().openModalText(payload)
 }
 
 </script>

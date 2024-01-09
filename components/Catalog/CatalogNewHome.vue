@@ -4,7 +4,7 @@
       <CardOffer v-for="offer in offers" :offer="offer"/>
     </div>
   </div>
-  <nuxt-link to="/new" class="button button--short button--primary-opacity button--more">все автомобили</nuxt-link>
+  <nuxt-link to="/new" class="button button--short button--primary-opacity button--more">Все автомобили</nuxt-link>
 </template>
 
 <script setup lang="ts">

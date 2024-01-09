@@ -46,6 +46,11 @@ import BenefitsCredit from "~/components/Benefits/Credit.vue";
 import Picture from "~/components/Picture/index.vue";
 import { renderSeoTemplate } from "~/composables/seo";
 import Crumbs from "~/components/Crumbs/index.vue";
+import {useSort} from "~/store/sort";
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
 
 const seoTags = renderSeoTemplate("about");
 </script>

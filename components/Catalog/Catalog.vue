@@ -1,8 +1,8 @@
 <template>
   <div class="catalog" id="catalog" v-if="offers && offers.length" >
-    <h2 class="heading heading--h2">
-      Новые автомобили
-    </h2>
+<!--    <h2 class="heading heading&#45;&#45;h2">-->
+<!--      Новые автомобили-->
+<!--    </h2>-->
     <div class="catalog__offers">
       <CardOffer :key="offer.id" v-for="offer in offers" :offer="offer"/>
     </div>
@@ -29,6 +29,7 @@ import {requestNewOffers} from "~/helpers/request";
 import {computed, ref} from "#imports";
 import {LocationQueryValue, useRoute} from 'vue-router';
 import {watch} from 'vue';
+import CatalogSort from '~/components/Catalog/Sort.vue'
 import {scrollToElement} from "~/helpers/scroll";
 
 
@@ -47,8 +48,6 @@ if(route.query.page){
   currentPagination.value = Number(route.query.page)
 }
 
-
-console.log(route)
 
 let variables = computed<NewOffersInputType>(() => {
   return {
@@ -72,8 +71,6 @@ offers.value = data.value?.offers.data
 
 current_page.value = data.value?.offers.current_page
 last_page.value = data.value?.offers.last_page
-
-console.log(data.value?.offers)
 
 loading.value = pending.value
 
@@ -145,5 +142,13 @@ const paginateClick = async (page: number) => {
   await router.push({path: route.fullPath, query});
   await scrollToElement("#catalog");
 };
+
+onMounted(()=>{
+  setTimeout(()=>{
+    if(route.query.price_to || route.query){
+      scrollToElement("#catalog");
+    }
+  },300)
+})
 
 </script>

@@ -19,7 +19,8 @@
 
 .mini-card__folder-title {
   font-size: 18px;
-  font-family: $fontFamilyBold, $fontApple;
+  font-weight: 900 !important;
+  //font-family: $fontFamilyBold, $fontApple;
   margin-bottom: 8px;
 }
 
@@ -163,6 +164,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 6px;
   .button--card-credit{
     width: 100%;
   }
@@ -194,7 +196,7 @@
 }
 
 .mini-card__offer-credit {
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
 }
@@ -204,6 +206,9 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .mini-card__offer-credit {
+    font-size: 14px;
+  }
   .mini-card__offer-stock {
     top: 16px;
     right: 16px;

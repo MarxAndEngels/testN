@@ -17,6 +17,7 @@
 
 .benefits__item {
   min-width: 192px;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.30);
   backdrop-filter: blur(5px);
   padding: 8px;
@@ -26,9 +27,9 @@
 }
 
 .benefits__item .nuxt-icon {
-  width: 32px;
-  min-width: 32px;
-  height: 32px;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
   color: $color-main;
 }
 
@@ -38,7 +39,7 @@
 
 @media screen and (min-width: $desktop-width) {
   .benefits__item {
-    padding: 16px;
+    padding: 16px 24px;
     min-width: auto;
   }
   .benefits__line {
@@ -48,3 +49,63 @@
     border: none;
   }
 }
+
+
+.benefits__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.benefits__modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 13;
+  background: rgba(0, 0, 0, .64);
+}
+
+.benefits__modal-content {
+  z-index: 14;
+  position: absolute;
+  width: 100%;
+  max-width: 460px;
+  min-height: 80px;
+  border-radius: $border-radius;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  padding: 22px 40px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.benefits__modal-close {
+  position: absolute;
+  top: 8px;
+  font-size: 40px;
+  right: 12px;
+  cursor: pointer;
+}
+.benefits__modal-title{
+  font-weight: 900;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-grey-light;
+  padding-bottom: 12px;
+}
+
+.benefits__modal-text{
+  margin-top: 12px;
+}
+
+.benefits__modal-test {
+  padding-right: 8px;
+}
+
+

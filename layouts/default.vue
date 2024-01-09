@@ -6,6 +6,7 @@
   </main>
   <Footer/>
   <Modal/>
+  <ModalText/>
 </template>
 
 <script setup lang="ts">

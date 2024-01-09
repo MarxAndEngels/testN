@@ -33,19 +33,15 @@ export const filterNewGql: DocumentNode = gql`
         )
         {
             gearbox {
-                name
                 title
             }
             engineType {
-                name
                 title
             }
             driveType {
-                name
                 title
             }
             bodyType {
-                name
                 title
             }
             count

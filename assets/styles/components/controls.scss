@@ -8,15 +8,18 @@
 input {
   width: 100%;
   height: 48px;
-  border: 1px solid $color-text-light;
+  //border: 1px solid $color-text-light;
+  background: $color-grey-light;
   font-size: 16px;
   padding-left: 12px;
   border-radius: 4px;
   font-family: $fontFamily;
+  color: $color-black;
 
   &::placeholder {
     font-family: $fontFamily;
     font-size: 16px;
+    color: $color-black;
     color: $color-text-light;
   }
 }
@@ -33,8 +36,8 @@ input {
   width: 100%;
   height: 48px;
   font-size: 16px;
-  padding-right: 8px;
-  border: 1px solid $color-text-light;
+  padding-right: 0px;
+  //border: 1px solid $color-text-light;
   background: transparent;
   border-radius: 4px;
 }
@@ -73,8 +76,22 @@ select {
   padding-left: 12px;
   background: transparent;
   border-radius: 4px;
+  background: $color-grey-light;
   color: $color-black;
   outline: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    pointer-events: none;
+    transform: rotate(45deg);
+  }
 }
 
 .select {
@@ -83,14 +100,15 @@ select {
   height: 48px;
   padding-left: 12px;
   padding-right: 6px;
-  border: 1px solid $color-text-light;
+  //border: 1px solid $color-text-light;
+  background: $color-grey-light;
   outline: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
   border-radius: 4px;
-  color: $color-text-light;
+  color: $color-black;
 
   &:hover,
   &:focus {
@@ -101,10 +119,28 @@ select {
 .select--mobile {
   display: block;
   border-bottom: 0;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    pointer-events: none;
+    transform: rotate(45deg);
+  }
 }
 
 .select-data {
   font-size: 16px;
+}
+
+.range__input{
+  //border: 1px solid $color-grey-text;
+  background: $color-grey-light;
 }
 
 .select .nuxt-icon svg {
@@ -327,6 +363,19 @@ input[type="checkbox"]:checked + .checkbox__custom {
 
 .select--desktop {
   display: none;
+  background: $color-grey-light;
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 14px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid $color-main;
+    border-right: 1px solid $color-main;
+    pointer-events: none;
+    //transform: rotate(45deg);
+  }
 }
 
 .select__modal {
@@ -343,6 +392,14 @@ input[type="checkbox"]:checked + .checkbox__custom {
     height: auto;
   }
 }
+
+@media screen and (min-width: $tablet-width) {
+  .range__input{
+
+  }
+}
+
+
 
 @media screen and (min-width: $desktop-width) {
   .default__select--catalog {
@@ -399,7 +456,7 @@ input[type="checkbox"]:checked + .checkbox__custom {
     max-height: 160px;
     overflow-y: scroll;
     overflow-x: hidden;
-    z-index: 2;
+    z-index: 8;
     left: -1px;
     background: $color-white;
     border-bottom: 1px solid $color-border;
@@ -435,6 +492,7 @@ input[type="checkbox"]:checked + .checkbox__custom {
 }
 
 @media (min-width: $desktop-large-width) {
+
   .switch__name,
   .switch__text {
     font-size: 14px;

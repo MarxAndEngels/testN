@@ -5,6 +5,7 @@
       {{ seoTags.title }}
     </h1>
     <ListMarks/>
+    <filters-main/>
     <Catalog/>
   </div>
 </template>

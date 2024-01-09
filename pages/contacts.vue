@@ -17,6 +17,11 @@ import SectionContacts from "~/components/Section/Contacts.vue";
 import SectionServices from "~/components/Section/Services.vue";
 import { renderSeoTemplate } from "~/composables/seo";
 import Crumbs from "~/components/Crumbs/index.vue";
+import {useSort} from "~/store/sort";
+
+const stateSort = useSort()
+
+stateSort.setSort(null)
 
 const seoTags = renderSeoTemplate('contacts')
 </script>

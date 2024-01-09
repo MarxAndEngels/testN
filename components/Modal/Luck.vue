@@ -6,7 +6,7 @@
           :error="false" />
       </div>
       <div class="form__control" :class="{ 'error': error === 'phone' }">
-        <Input :value="form.phone" @update:modelValue="newValue => form.phone = newValue" placeholder="телефон" type="tel"
+        <Input :value="form.phone" @update:modelValue="newValue => form.phone = newValue" placeholder="Телефон" type="tel"
           mask="phone" :error="false" />
       </div>
       <div class="form__control">

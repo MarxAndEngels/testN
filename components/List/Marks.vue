@@ -9,8 +9,6 @@
         <span class="list__tab-name">{{ item.title }}</span>
         <span class="list__tab-descr">Моделей {{ item.folders.length }}</span>
        </div>
-
-
       </nuxt-link>
     </div>
     <div class="button button--more" v-if="!modal" @click="full = !full">
@@ -22,10 +20,12 @@
 <script setup lang="ts">
 import { useSiteConfig } from "~/store/siteConfig";
 import { CatalogType } from "~/apollo/queries/siteConfig";
+const {isMobile} = useDevice();
 
 const emit = defineEmits(["click"]);
 const props = defineProps<{
   modal?: boolean;
+  fullMark?: boolean
 }>();
 const marks = useSiteConfig().catalog;
 // const sortedMarks = computed(() => {
@@ -37,11 +37,24 @@ let full = ref<boolean>(false)
 
 const sortedMarks = computed(() => {
   //Сортировка по алфавиту
-  if (full.value) {
+  if(props.fullMark) {
     return marks.sort((a: any, b: any) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
-  } else {
-    return marks.filter(mark => mark.priority)?.sort((a: any, b: any) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
   }
+
+  else {
+    if (full.value) {
+      return marks.sort((a: any, b: any) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+
+    } else {
+      if (isMobile) {
+        return marks.filter(mark => mark.priority)?.sort((a: any, b: any) => a.title.toLowerCase().localeCompare(b.title.toLowerCase())).slice(0, 10)
+      } else {
+        return marks.filter(mark => mark.priority)?.sort((a: any, b: any) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+      }
+    }
+  }
+
+
 })
 
 

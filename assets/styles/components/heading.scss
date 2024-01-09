@@ -5,7 +5,7 @@
 
 .heading--h1 {
   margin: 16px 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .heading--h2 {
@@ -41,4 +41,11 @@
 .heading--form {
   font-family: $fontFamilyBold, $fontApple;
   color: $color-black;
+}
+
+@media (max-width: $mobile-width-only) {
+  .heading--h1 {
+    margin: 16px 0;
+    font-size: 18px;
+  }
 }
