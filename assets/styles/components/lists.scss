@@ -151,6 +151,12 @@
   margin-bottom: 12px;
 }
 
+@media screen and (max-width: $iphone-mini-only) {
+  .list__tab{
+    padding: 8px 12px;
+  }
+}
+
 @media screen and (min-width: $tablet-width) {
   .list__title {
     display: block;

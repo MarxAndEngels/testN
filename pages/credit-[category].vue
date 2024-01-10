@@ -12,6 +12,7 @@
       <div class="grid__text">
         <FormFsspp/>
         <FormSteps/>
+        <BannersPreview v-if="isDesktop" image="/img/banners/preview/1"/>
         <div class="form__text">
           <p class="text__p">
             Благодаря нашим кредитным программам Вы сможете наслаждаться автомобилем уже сегодня без первоначального
@@ -27,7 +28,7 @@
             банка-партнера.
           </p>
         </div>
-        <BannersCredit v-if="isDesktop"/>
+<!--        <BannersCredit v-if="isDesktop"/>-->
       </div>
     </div>
 

@@ -14,6 +14,8 @@
           :click-handler="paginateClick"
           :prev-text="'Назад'"
           :next-text="'Вперед'"
+          prev-class="prev"
+            next-class="next"
           :container-class="'pagination'">
       </Paginate>
     </client-only>

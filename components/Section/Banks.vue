@@ -67,10 +67,10 @@ onMounted(() => {
     margin: 32,
     Dots: false,
     transition: "slide",
-    Navigation: {
-      nextTpl: "",
-      prevTpl: "",
-    },
+    // Navigation: {
+    //   nextTpl: "",
+    //   prevTpl: "",
+    // },
   };
   const fc = new Carousel(container, options);
 });

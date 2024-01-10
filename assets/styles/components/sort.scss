@@ -4,7 +4,7 @@
   justify-content: space-between;
   margin-top: 16px;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 .catalog__sort {
   display: flex;
@@ -23,7 +23,7 @@
   width: 24px;
   height: 24px;
   color: $color-main;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .catalog__sort-data {
@@ -31,8 +31,8 @@
 
   svg {
     margin-left: 6px;
-    width: 24px;
-    height: 24px;
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
@@ -44,6 +44,7 @@
   cursor: pointer;
   //background: $color-grey-light;
   font-weight: 600;
+  margin-right: 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
   &.catalog__sort-item--active {
     color: $color-main;
@@ -52,6 +53,9 @@
 }
 
 @media screen and (max-width: $tablet-width) {
+  .catalog__filters-controllers {
+    margin-bottom: 28px;
+  }
   .catalog__filters-controllers {
     margin-top: 0;
     width: 100%;
@@ -86,6 +90,10 @@
     margin-top: 10px;
     padding-bottom: 10px;
     text-align: right;
+    text-wrap: nowrap;
+  }
+  .catalog__sort-item {
+    margin-right: 0;
   }
 }
 

@@ -25,6 +25,7 @@
   //margin-left: -16px;
   gap: 10px;
   background: $color-white;
+
   .range__input{
     height: 48px;
     //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
@@ -84,8 +85,8 @@
 }
 
 .catalog__filter-icon{
-  width: 24px;
-  height: 24px;
+  width: 20px !important;
+  height: 20px !important;
   color: $color-main;
   margin-right: 2px;
 }
@@ -123,10 +124,10 @@
   .filter__list-group{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     row-gap: 8px;
     .filter__list-item{
-      width: calc(50% - 5px);
+      width: calc(50% - 4px);
     }
     .range__inputs{
       //margin-top: 8px;
@@ -140,13 +141,13 @@
 
     .range__input-wrapper{
       position: relative;
-      width: calc(50% - 5px);
+      width: calc(50% - 4px);
       .range__input_price{
         position: absolute;
         pointer-events: none;
         background: $color-white;
         font-size: 12px;
-        padding: 1px 4px;
+        padding: 1px 2px;
         right: 3px;
         top: 5px;
         border-radius: 2px;
@@ -168,15 +169,25 @@
 }
 
 @media (max-width: 374px) {
-  .range__inputs .range__input{
-    padding-top: 10px;
-  }
+
   .range__input-wrapper{
     position: relative;
     .range__input_price{
       padding: 1px 2px;
+      right: 4px !important;
+      top: 8px !important;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .range__input-wrapper{
+    .range__input_price{
       right: 0px !important;
       top: 0px !important;
+    }
+    .range__input{
+      padding-top: 4px;
     }
   }
 }
@@ -197,12 +208,14 @@
 
 @media screen and (max-width: 365px) {
   .catalog__sort-icon,.catalog__filter-icon{
-    width: 18px;
-    height: 18px;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 20px;
+    max-height: 22px;
   }
 }
 
-@media screen and (max-width: 346px) {
+@media screen and (max-width: 352px) {
   .catalog__sort-icon,.catalog__filter-icon{
     display: none !important;
   }

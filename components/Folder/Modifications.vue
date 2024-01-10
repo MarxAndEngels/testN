@@ -141,7 +141,7 @@ const onCredit = (modification: ModificationType, complectation: ComplectationTy
   });
   useModals().openModal({
     open: true,
-    title: "заявка на автокредит",
+    title: "Заявка на автокредит",
     type: "credit-new",
   });
 };

@@ -19,7 +19,7 @@
 
 .header__inner {
   display: flex;
-  height: 56px;
+  height: 74px;
   align-items: center;
   gap: 8px;
   // border-top: 1px solid $color-black;
@@ -130,6 +130,8 @@
 
 .header__logo img {
   width: 100%;
+  min-width: 210px;
+  margin: 10px 0;
 }
 
 .burger {
@@ -353,6 +355,23 @@
   padding: 0 0 24px;
   height: calc(100vh - 114px);
   overflow-y: scroll;
+}
+
+@media screen and (max-width: $tablet-width) {
+  .header__logo img {
+    width: 100%;
+    min-width: 150px;
+    margin: 0px;
+  }
+  .header__inner{
+    height: 58px;
+  }
+}
+
+@media screen and (max-width: $iphone-mini-only) {
+  .header__marks {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {

@@ -11,6 +11,7 @@
       <div class="grid__text">
         <FormFsspp/>
         <FormSteps/>
+        <BannersPreview v-if="isDesktop" image="/img/banners/preview/2"/>
         <div class="form__text">
           <p class="text__p">
             Услуга Trade-In предполагате обмен Вашего старого автомобиля на более новый. Обмен позволяет сэкономить время на времязатратной продаже своего авто, и обновить автомобиль за пару часов.
@@ -22,7 +23,7 @@
         </div>
       </div>
     </div>
-    <SectionBanks v-if="isDesktop"/>
+<!--    <SectionBanks v-if="isDesktop"/>-->
   </div>
 </template>
 

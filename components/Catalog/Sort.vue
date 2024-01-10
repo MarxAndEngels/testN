@@ -34,18 +34,18 @@ let items = ref<any>([
     title: 'Сначала дороже',
     slug: 'price|desc'
   },
-  {
-    title: 'Год новее',
-    slug: 'year|desc'
-  },
-  {
-    title: 'Год старше',
-    slug: 'year|asc'
-  },
-  {
-    title: 'Пробег',
-    slug: 'run|asc'
-  },
+  // {
+  //   title: 'Год новее',
+  //   slug: 'year|desc'
+  // },
+  // {
+  //   title: 'Год старше',
+  //   slug: 'year|asc'
+  // },
+  // {
+  //   title: 'Пробег',
+  //   slug: 'run|asc'
+  // },
 ])
 
 let activeSort = ref<string>('Сначала дешевле')

@@ -9,6 +9,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: .16s;
+  font-weight: 500;
   transform: scale(1);
   &:hover{
     opacity: 0.7;
@@ -20,16 +21,27 @@
 }
 
 .button--more, .button--info, .button--trade-in {
-  color: $color-main;
-  background: $color-main-light;
+  color: $color-white;
+  // border: 1px solid $color-black;
+  background: $color-black;
+  font-weight: 600;
+  &:active {
+    transform: scale(1.02);
+  }
+}
 
+.button--more {
+  color: $color-black;
+  // border: 1px solid $color-black;
+  background: $color-grey-light;
+  font-weight: 600;
   &:active {
     transform: scale(1.02);
   }
 }
 
 .button--slider, .button--card-credit {
-  background: linear-gradient($color-gradient-second, $color-gradient-second);
+  background: $color-main;
   color: $color-white;
   padding: 0 16px;
 
@@ -39,14 +51,16 @@
 }
 
 .button--modification {
-  background: $color-white;
   color: $color-black;
-  border: 1px solid $color-black;
+  // border: 1px solid $color-black;
+  background: $color-grey-light;
 }
 
 .button--active-light {
-  background: linear-gradient($color-gradient-second, $color-gradient-second);
-  background: $color-main-light;
+  // color: $color-black;
+  color: $color-white;
+  // border: 1px solid $color-black;
+  background: $color-black;
 
   &:active {
     transform: scale(1.02);
@@ -55,7 +69,7 @@
 
 
 .button--active {
-  background: linear-gradient($color-gradient-second, $color-gradient-second);
+  background: $color-main;
   color: $color-white;
 
   &:active {
@@ -70,7 +84,7 @@
 }
 
 .button--primary {
-  background: linear-gradient($color-gradient-second, $color-gradient-second);
+  background: $color-main;
   color: $color-white;
 
   &:active {

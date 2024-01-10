@@ -8,12 +8,12 @@
     <!--    </nuxt-link>-->
     <nuxt-link to="/"
                class="header__logo">
-      <img src="/img/logo-official.svg"
-           alt="logo">
+           <img v-if="isMobile" src="/img/logo.svg" alt="logo">
+            <img v-else src="/img/logo-desktop.svg" alt="logo">
     </nuxt-link>
   </div>
 </template>
 <script setup lang="ts">
-
+const { isMobile } = useDevice();
 </script>
 

@@ -1,4 +1,3 @@
-
 .pagination {
   width: 100%;
   display: flex;
@@ -6,12 +5,15 @@
   list-style: none;
   margin-top: 16px;
   padding-bottom: 24px;
+  margin-top: 28px;
+  *{
+    font-size: 16px;
+  }
 }
 
 .pagination li {
   border: none;
-  padding: 4px;
-  margin: 0 4px;
+  //margin: 0 4px;
   font-size: 14px;
 
   &:first-child {
@@ -22,8 +24,15 @@
     //background: $ color-info;
   }
 
-  &.active {
-    //background: $ color-info;
+  &.active a {
+    color: $color-main;
+  }
+
+  &.prev.disabled {
+    display: none;
+  }
+  &.next.disabled {
+    display: none;
   }
 
   &:hover {
@@ -33,11 +42,30 @@
 }
 
 .pagination li.active a {
-  color: $color-element;
+
 }
 
 .pagination li a {
   display: block;
   cursor: pointer;
-  color: $color-element-light;
+  border: 1px solid $color-grey-light-main;
+  padding: 8px 16px;
+  border-right: none;
+  &:last-child{
+    border-right: 1px solid $color-grey-light-main;
+  }
+}
+@media screen and (max-width: $mobile-width-only) {
+  .pagination li a {
+    padding: 8px 12px;
+  }
+  .prev,.disabled{
+      display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .pagination {
+    justify-content: center;
+  }
 }
