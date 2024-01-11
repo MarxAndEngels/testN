@@ -177,6 +177,7 @@
     }
   }
   .mark__banner-line {
+    background: linear-gradient(90deg, $color-main 10%, rgba(0, 0, 0, 0) 90%);
     border-radius: 32px;
     display: flex;
     align-items: center;
