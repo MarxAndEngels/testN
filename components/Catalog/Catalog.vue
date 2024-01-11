@@ -61,7 +61,7 @@ let variables = computed<NewOffersInputType>(() => {
     drive_type: route.query.drive_type ? route.query.drive_type.toString().toUpperCase() : null,
     price_from: route.query.price_from ? Number(route.query.price_from) : null,
     price_to: route.query.price_to ? Number(route.query.price_to) : null,
-    sort: route.query.sort ? route.query.sort : route.name == 'new' ? 'created_at|desc': 'price|asc',
+    sort: route.query.sort ? route.query.sort : route.name == 'new' ? 'price|asc': 'created_at|desc',
     page: Number(route.query.page) || 1,
     set: route.params.set || null
   }
